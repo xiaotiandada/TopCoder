@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+
+    <link rel="stylesheet" href="../public/default/default.css">
+    <link rel="stylesheet" href="../public/css/nivo-slider.css">
+
+    <link rel="stylesheet" href="../public/css/iconfont.css">
+</head>
+
+<body>
+    <header class="head">
+        <div class="head_content">
+            <div class="head_logo">
+                <h1>码农工作室</h1>
+            </div>
+            <nav class="head_nav">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">成功案例</a></li>
+                    <li><a href="#">关于工作室</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="../public/img/niveone.jpg" data-thumb="../public/img/niveone.jpg" alt=""  />
+                <img src="../public/img/nivetwo.jpg" data-thumb="../public/img/nivetwo.jpg" alt="" />
+                <img src="../public/img/nivethree.jpg" data-thumb="../public/img/nivethree.jpg" alt="" data-transition="slideInLeft" />
+                <img src="../public/img/nivefive.jpg" data-thumb="../public/img/nivefive.jpg" alt=""  />
+            </div>
+        </div>
+        <div class="Title">
+            <h2>专注于WEB开发的一个团队</h2>
+            <p>通过专业的团队设计,提供最优质的服务</p>
+            <p>服务第一&nbsp;&nbsp;客户至上</p>
+        </div>
+    </div>
+    <div class="need">
+        <div class="need_Title">
+                <h3>需求</h3>
+                <p>What need do you have?</p>
+                <div class="Title_line"></div>
+        </div>
+        <div class="need_list">
+            <div class="list_need">
+                <i class="iconfont icon-pc"></i>
+                <p>PC端</p>
+            </div>
+            <div class="list_need">1</div>
+            <div class="list_need">1</div>
+            <div class="list_need">1</div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../public/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../public/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider()
+    });
+    </script>
+</body>
+
+</html>
