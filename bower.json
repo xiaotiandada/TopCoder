@@ -1,0 +1,17 @@
+{
+  "name": "webtopcoder",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "xiaotian <952822399@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/xiaotiandada/TopCoder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+    <!--<link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">-->
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="../public/css/style.css">
 
-    <link rel="stylesheet" href="../public/default/default.css">
-    <link rel="stylesheet" href="../public/css/nivo-slider.css">
+    <link rel="stylesheet" href="../public/css/banner.css">
 
     <link rel="stylesheet" href="../public/css/iconfont.css">
 </head>
 
 <body>
-    <header class="head">
+    <header class="head" id="heads">
         <div class="head_content">
             <div class="head_logo">
                 <h1>码农工作室</h1>
@@ -31,21 +31,39 @@
             </nav>
         </div>
     </header>
-    <div class="wrapper">
-        <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider">
-                <img src="../public/img/niveone.jpg" data-thumb="../public/img/niveone.jpg" alt=""  />
-                <img src="../public/img/nivetwo.jpg" data-thumb="../public/img/nivetwo.jpg" alt="" />
-                <img src="../public/img/nivethree.jpg" data-thumb="../public/img/nivethree.jpg" alt="" data-transition="slideInLeft" />
-                <img src="../public/img/nivefive.jpg" data-thumb="../public/img/nivefive.jpg" alt=""  />
-            </div>
+
+    <div class="banner__main" id="banner__main">
+        <div class="banner" id="banner">
+            <a href="javascript:;">
+                <div class="banner-slide slide1 slide-active" style="display: block;"></div>
+            </a>
+            <a href="javascript:;">
+                <div class="banner-slide slide2"></div>
+            </a>
+            <a href="javascript:;">
+                <div class="banner-slide slide3"></div>
+            </a>
         </div>
+        <a href="javascript:;" class="banner__anchor icon__prev" id="prev">&lt;</a>
+        <a href="javascript:;" class="banner__anchor icon__next" id="next">&gt;</a>
+        <!-- <div class="buttons">
+            <span class="buttons__active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> -->
+        <div class="buttons" id="buttons">
+
+        </div>
+
         <div class="Title">
-            <h2>专注于WEB开发的一个团队</h2>
-            <p>通过专业的团队设计,提供最优质的服务</p>
-            <p>服务第一&nbsp;&nbsp;客户至上</p>
+        <h2>专注于WEB开发的一个团队</h2>
+        <p>通过专业的团队设计,提供最优质的服务</p>
+        <p>服务第一&nbsp;&nbsp;客户至上</p>
         </div>
     </div>
+
     <div class="need">
         <div class="need_Title">
                 <h3>需求</h3>
@@ -53,37 +71,67 @@
                 <div class="Title_line"></div>
         </div>
         <div class="need_list">
+            <div class="list_bColor">
             <div class="list_need">
                 <div class="list_icon">
                     <i class="iconfont icon-pc"></i>
                 </div>
-
-                <p>PC端</p>
-            </div>
-
-            <div class="list_need">
-                <div class="list_icon">
-                    <i class="iconfont icon-pc"></i>
+                <p>企业官网搭建</p>
+                <div class="icon_line">
                 </div>
-
-                <p>PC端</p>
+                <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
             </div>
+        </div>
 
-            <div class="list_need">
-                <div class="list_icon">
-                    <i class="iconfont icon-pc"></i>
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
                 </div>
-
-                <p>PC端</p>
             </div>
 
-            <div class="list_need">
-                <div class="list_icon">
-                    <i class="iconfont icon-pc"></i>
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
                 </div>
-
-                <p>PC端</p>
             </div>
+
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
+                </div>
+            </div>
+
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
+                </div>
+            </div>
+
+
 
         </div>
     </div>
@@ -99,37 +147,67 @@
             <div class="Title_line"></div>
         </div>
         <div class="need_list">
-            <div class="list_need">
-                <div class="list_icon">
-                    <i class="iconfont icon-pc"></i>
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
                 </div>
-
-                <p>PC端</p>
             </div>
 
-            <div class="list_need">
-                <div class="list_icon">
-                    <i class="iconfont icon-pc"></i>
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
                 </div>
-
-                <p>PC端</p>
             </div>
 
-            <div class="list_need">
-                <div class="list_icon">
-                    <i class="iconfont icon-pc"></i>
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
                 </div>
-
-                <p>PC端</p>
             </div>
 
-            <div class="list_need">
-                <div class="list_icon">
-                    <i class="iconfont icon-pc"></i>
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
                 </div>
-
-                <p>PC端</p>
             </div>
+
+            <div class="list_bColor">
+                <div class="list_need">
+                    <div class="list_icon">
+                        <i class="iconfont icon-pc"></i>
+                    </div>
+                    <p>企业官网搭建</p>
+                    <div class="icon_line">
+                    </div>
+                    <p class="need_text">专注于高品质视觉体验及互联网设计开发</p>
+                </div>
+            </div>
+
+
 
         </div>
     </div>
@@ -188,16 +266,10 @@
         <p>&copy;2017 Xiaotian.com 版权所有</p>
     </footer>
 
-
-
-
-    <script type="text/javascript" src="../public/js/jquery-1.9.0.min.js"></script>
-    <script type="text/javascript" src="../public/js/jquery.nivo.slider.js"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider()
-    });
-    </script>
+   <!--<script src="../public/libs/jquery/dist/jquery.js"></script>-->
+    <script src="../public/js/base.js"></script>
+    <script src="../public/js/banner.js"></script>
+    <script src="../public/js/head.js"></script>
 </body>
 
 </html>
