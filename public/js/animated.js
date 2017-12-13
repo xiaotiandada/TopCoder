@@ -38,6 +38,9 @@
         isTop = false
     }
 
+
+
+
     /**
      * 回到顶部
      */
@@ -56,11 +59,65 @@
     }
 
     /**
+     * 解决用户屏幕过长 无法正常显示回到顶部的bug
+     * @return {number}
+     */
+    function getScrollTop() {
+        var scrollTop = 0,
+            bodyScrollTop = 0,
+            documentScrollTop = 0;
+        if (document.body) {
+            bodyScrollTop = document.body.scrollTop;
+        }
+        if (document.documentElement) {
+            documentScrollTop = document.documentElement.scrollTop;
+        }
+        scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+        return scrollTop;
+    }
+
+    //文档的总高度
+    function getScrollHeight() {
+        var scrollHeight = 0,
+            bodyScrollHeight = 0,
+            documentScrollHeight = 0;
+        if (document.body) {
+            bodyScrollHeight = document.body.scrollHeight;
+        }
+        if (document.documentElement) {
+            documentScrollHeight = document.documentElement.scrollHeight;
+        }
+        scrollHeight = (bodyScrollHeight - documentScrollHeight > 0) ? bodyScrollHeight : documentScrollHeight;
+        return scrollHeight;
+    }
+    //浏览器视口的高度
+    function getWindowHeight() {
+        var windowHeight = 0;
+        if (document.compatMode == "CSS1Compat") {
+            windowHeight = document.documentElement.clientHeight;
+        } else {
+            windowHeight = document.body.clientHeight;
+        }
+        return windowHeight;
+    }
+
+    /**
+     * 到底部添加class
+     */
+    function isBottom() {
+        if (getScrollTop() + getWindowHeight() == getScrollHeight()) {
+            addCls(oScrollTop,'scrollLeft')
+        }
+    }
+
+    /**
      * 滑动调用
      */
     window.onscroll = function () {
         scrollInit()
         clientHF()
+        isBottom()
+
     }
     /**
      * 回到顶部单击调用
