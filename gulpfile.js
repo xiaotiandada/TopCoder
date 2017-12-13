@@ -61,5 +61,5 @@ gulp.task('build-js',function(){
     return gulp.src('./public/js/*.js')
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./public/js/*.js'));
+    .pipe(gulp.dest('./public/js'));
 });

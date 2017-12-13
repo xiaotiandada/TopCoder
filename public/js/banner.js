@@ -1,5 +1,4 @@
 (function(){
-    'use strict';
     var bannerMain = document.getElementById('banner__main');
     var banner = document.getElementById('banner');
     var pics = document.getElementById('banner').getElementsByTagName('div');
