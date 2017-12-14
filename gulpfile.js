@@ -14,6 +14,9 @@ var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
+
+var babel = require('gulp-babel');
+
 // gulp.task('testless',function(){
 //     return gulp.src('./less/**/*.less')
 //     .pipe(sourcemaps.init())
@@ -39,7 +42,7 @@ gulp.task('watch',['build-style'],function(gulpCallback){
     },function callback(){
         gulp.watch('./views/*.html',browserSync.reload);
         gulp.watch('./public/less/*.less',['build-style']);
-        gulp.watch('./public/js/*.js',['build-js']);
+        gulp.watch('./public/js/*.js',['build-es6']);
         gulpCallback();
     });
 });
@@ -57,9 +60,17 @@ gulp.task('build-style',function(){
     .pipe(browserSync.stream());
 });
 
-gulp.task('build-js',function(){
+// gulp.task('build-js',function(){
+//     return gulp.src('./public/js/*.js')
+//     .pipe(concat('main.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('./public/js'));
+// });
+
+gulp.task('build-es6',function(){
     return gulp.src('./public/js/*.js')
-    .pipe(concat('main.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./public/js'));
+        // .pipe(concat('main.js'))
+        .pipe(babel())
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/es6'));
 });

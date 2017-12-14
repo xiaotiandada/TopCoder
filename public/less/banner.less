@@ -7,6 +7,9 @@
   overflow: hidden;
   position: relative;
   box-shadow: 0 2px 8px 0 rgba(7,17,27,.06);
+  &:hover .banner__anchor{
+    display: block;
+  }
 
   .banner{
     width: @bWidth;
@@ -37,6 +40,7 @@
     color: #fff;
     cursor: pointer;
     z-index: 2;
+    display: none;
   }
 
   .buttons{
@@ -81,15 +85,15 @@
   display: block;
 }
 .slide1{
-  background-image:url(../img/niveone.jpg);
+  background-image:url(../img/bannerOne.png);
 }
 
 .slide2{
-  background-image:url(../img/nivetwo.jpg);
+  background-image:url(../img/bannerTwo.png);
 }
 
 .slide3{
-  background-image:url(../img/nivethree.jpg);
+  background-image:url(../img/bannerThree.png);
 }
 
 .icon__prev{

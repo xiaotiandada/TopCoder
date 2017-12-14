@@ -1,24 +1,24 @@
-(function(){
-    var bannerMain = document.getElementById('banner__main');
-    var banner = document.getElementById('banner');
-    var pics = document.getElementById('banner').getElementsByTagName('div');
-    var prev = document.getElementById('prev');
-    var next = document.getElementById('next');
-    var buttons = document.getElementById('buttons');
-    var spanChildren =document.getElementById('buttons').getElementsByTagName('span');
+(()=>{
+    let bannerMain = getElem('#banner__main');
+    let banner = getElem('#banner');
+    let pics = getElem('#banner').getElementsByTagName('div');
+    let prev = getElem('#prev');
+    let next = getElem('#next');
+    let buttons = getElem('#buttons');
+    let spanChildren =getElem('#buttons').getElementsByTagName('span');
 
-    var index = 0;
-    var size = pics.length;
+    let index = 0;
+    let size = pics.length;
 
-    var timer=null;
+    let timer=null;
 
 
     // 浏览器加载生成圆点
     function circles(){
         //var circle = document.createElement('div');
         //circle.setAttribute('class','buttons');
-        for(var i = 0; i<size;i++){
-            var circleSpan = document.createElement('span');
+        for(let i = 0; i<size;i++){
+            let circleSpan = document.createElement('span');
             buttons.appendChild(circleSpan);
         }
         //bannerMain.appendChild(circle);
@@ -59,7 +59,7 @@
 
     // 轮播图切换 根据图片数量切换 size
     function changeImg(){
-        for(var i = 0; i < size; i++ ){
+        for(let i = 0; i < size; i++ ){
             spanChildren[i].className="";
             pics[i].style.display = 'none';
         }
@@ -94,7 +94,7 @@
     };
 
     // 遍历span圆点 单击切换导航
-    for(var i =0,len=spanChildren.length;i<len;i++){
+    for(let i =0,len=spanChildren.length;i<len;i++){
         // 第一个圆点默认
         spanChildren[0].setAttribute('class','buttons__active');
         // 增加索引值
