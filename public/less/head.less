@@ -7,6 +7,7 @@
   -ms-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
+  z-index: 6;
   .head_content{
     width: 1000px;
     height: 50px;
@@ -15,6 +16,56 @@
       width: 150px;
       height: 35px;
       margin-top: 7.5px;
+      float: left;
+      background: url('../img/logo.gif') no-repeat;
+      background-size: 100%;
+      h1{
+        margin: 0;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+      }
+    }
+    .head_nav{
+      float: right;
+      ul{
+        margin: 0;
+        li{
+          list-style: none;
+          float: left;
+          margin: 0;
+          a{
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            display: block;
+            padding: 0 10px;
+            line-height: 50px;
+            letter-spacing: 1px;
+            &:after{
+            display: block;
+            content: '';
+            margin-top: 0;
+            width:0;
+            height:0;
+            background: transparent;
+            -webkit-transition: all .35s;
+            -moz-transition: all .35s;
+            -ms-transition: all .35s;
+            -o-transition: all .35s;
+            transition: all .35s;
+          }
+            &:hover{
+              &:after{
+                margin-top: -14px;
+                width: 100%;
+                height:2px;
+                background: #fff;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

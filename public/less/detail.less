@@ -1,0 +1,55 @@
+@dHeight: 500px;
+.detail{
+  min-width:1000px;
+  height: @dHeight;
+  position: relative;
+  background: #fff;
+  margin: 50px 0;
+  .center{
+    width: 1000px;
+    height: @dHeight;
+    margin: 0 auto;
+    overflow: hidden;
+    .d_text{
+      width: 50%;
+      height: @dHeight;
+      float: left;
+      ul{
+        margin: 0 0 0 40px;
+        padding: 0;
+        li{
+          list-style: none;
+          border-bottom: 1px solid #3360A3;
+          h3,p{
+            text-align: left;
+            color: #3360A3;
+            margin: 0;
+            line-height: 46px;
+          }
+        }
+      }
+
+    }
+    img{
+      width: 440px;
+      display: block;
+      float: left;
+    }
+  }
+  .dIconCenter{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 60px;
+    left: 50%;
+    margin-left: -15px;
+    font-size: 30px !important;
+    cursor:pointer;
+    &:hover{
+      color: #09F;
+    }
+  }
+
+
+}
+
